@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Float</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(22, 22, 22);
+      }
+
+      h1 {
+        color: white;
+        font-size: 10rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        position: relative;
+      }
+
+      h1::before {
+        content: "Subscribe...";
+        border-right: 0.2rem solid yellow;
+        width: 100%;
+        position: absolute;
+        color: yellow;
+        text-shadow: -4px 4px 0.2rem rgb(119, 119, 119);
+        animation: reveal 1s linear infinite alternate;
+        overflow: hidden;
+      }
+
+      @keyframes reveal {
+        0% {
+          width: 100%;
+        }
+
+        100% {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Subscribe...</h1>
+  </body>
+</html>

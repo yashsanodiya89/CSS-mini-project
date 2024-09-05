@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1682686580950-960d1d513532?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-color: rgb(92, 92, 92);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+      }
+
+      .rain {
+        height: 100vh;
+        background-image: url(./rain.png);
+        animation: rain 0.5s linear infinite;
+      }
+
+      @keyframes rain {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 20% 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rain"></div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button shake</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(34, 34, 34);
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .button {
+        height: 15rem;
+        width: 45rem;
+        background-color: rgb(34, 34, 34);
+        border: 0.5rem solid red;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        font-weight: bold;
+      }
+
+      .button:hover {
+        animation: shake 0.25s;
+        color: blue;
+        border-color: blue;
+      }
+
+      @keyframes shake {
+        0% {
+          rotate: 15deg;
+        }
+        25% {
+          rotate: -15deg;
+        }
+        50% {
+          rotate: 15deg;
+        }
+        75% {
+          rotate: -15deg;
+        }
+        100% {
+          rotate: 0deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button">Shake Me</div>
+  </body>
+</html>
